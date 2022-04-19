@@ -13,7 +13,7 @@ function Game(){
         const boardCopy = [...board];
         if(winner || boardCopy[index]) {
             // console.log(winner)
-            console.log(boardCopy[index]);
+            // console.log(boardCopy[index]);
             return;
         }
         setCountDraw(prev => prev + 1);
@@ -31,7 +31,7 @@ function Game(){
     return (
         <div>
            <Board cells={board} onClick={handleClick}></Board>
-           {!winner && (countDraw !== 9 ? console.log(countDraw) : <div>DRAW</div>)}
+           {!winner && (countDraw !== 9 ? console.log(countDraw) : <div className="game-draw">DRAW</div>)}
            {winner && <div className="game-winner">
                winner is {winner}
            </div>}
