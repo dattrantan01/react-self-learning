@@ -11,6 +11,10 @@ module.exports = {
             #FFB86C 64.35%,
             #FC2872 119.91%
           )`,
+          'secondary-gradient': `linear-gradient(
+            #ffafbd,
+            #ffc3a0
+          )`,
       }
 
     },

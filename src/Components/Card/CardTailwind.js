@@ -1,6 +1,8 @@
 import React from 'react';
 
-const CardTailwind = () => {
+const CardTailwind = (props) => {
+
+
     return (
         
         <div className="relative w-[400px]">
@@ -25,7 +27,7 @@ const CardTailwind = () => {
                 </div>
                 <div className="flex items-center justify-between">
                    <h3 className="text-lg font-medium">Cosmic Perspective</h3>
-                   <span className="text-lg font-bold text-transparent bg-clip-text bg-primary-gradient">12000 vnd</span>
+                   <span className={`text-lg font-bold text-transparent bg-clip-text ${props.CardBotNumber ? "bg-primary-gradient" : "bg-secondary-gradient"}`}>12000 vnd</span>
                 </div>
             </div>
            

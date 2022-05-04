@@ -1,16 +1,22 @@
 
 import './App.css';
-import Button from './Components/Button/Button';
-import Card from './Components/Card/Card';
-import Card2 from './Components/Card/Card2';
-import CardList from './Components/Card/CardList';
-import CardTailwind from './Components/Card/CardTailwind';
+import HackerNews from './Components/News/HackerNews';
+// import Header from './Components/Header/Header';
+import Photos from './Components/Photo/Photos';
+import PhotosAsync from './Components/Photo/PhotosAsync';
+// import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
+// import Button from './Components/Button/Button';
+// import Card from './Components/Card/Card';
+// import Card2 from './Components/Card/Card2';
+// import CardList from './Components/Card/CardList';
+// import CardTailwind from './Components/Card/CardTailwind';
 
-import DoubleCounter from './Components/DoubleCounter/DoubleCounter';
-import Game from './Components/tictactoe/Game';
-import Toggle from './Components/Toggle/Toggle';
+// import DoubleCounter from './Components/DoubleCounter/DoubleCounter';
+// import Game from './Components/tictactoe/Game';
+// import Toggle from './Components/Toggle/Toggle';
 
-import YoutubeList from './Components/Youtube/YoutubeList';
+
+// import YoutubeList from './Components/Youtube/YoutubeList';
 // import { GlobalStyles } from './GlobalStyles';
 // import { ThemeProvider } from 'styled-components'
 
@@ -21,6 +27,7 @@ import YoutubeList from './Components/Youtube/YoutubeList';
 // }
 
 function App() {
+
   return (
     // <ThemeProvider theme = {theme}> comment themeprovider lai de dung tailwind
     <div>
@@ -44,7 +51,11 @@ function App() {
         <Card2></Card2>
         <Card2></Card2> */}
       {/* </CardList> */}
-        <CardTailwind></CardTailwind>
+        {/* <CardTailwind CardBotNumber></CardTailwind> */}
+        {/* <Photos></Photos> */}
+        {/* <Header></Header> */}
+        {/* <PhotosAsync></PhotosAsync> */}
+        <HackerNews></HackerNews>
 
     </div>
       
