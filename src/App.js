@@ -1,14 +1,22 @@
 
 import './App.css';
-import HackerNews from './Components/News/HackerNews';
-// import Header from './Components/Header/Header';
-import Photos from './Components/Photo/Photos';
-import PhotosAsync from './Components/Photo/PhotosAsync';
+import DropDownWithHook from './Components/DropDown/DropDownWithHook';
+
+import SideBarMenuBtn from './Components/SideBarMenu/SideBarMenuBtn';
+// import Blog from './Components/Blog';
+// import DropDown from './Components/DropDown/DropDown';
+// import Input from './Components/Input/Input';
+// import TextareaAutoResize from './Components/Input/TextareaAutoResize';
+// import HackerNews from './Components/News/HackerNews';
+// // import Header from './Components/Header/Header';
+// import Photos from './Components/Photo/Photos';
+// import PhotosAsync from './Components/Photo/PhotosAsync';
+// import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import Button from './Components/Button/Button';
 // import Card from './Components/Card/Card';
 // import Card2 from './Components/Card/Card2';
-// import CardList from './Components/Card/CardList';
+// import Cardgist from './Components/Card/CardList';
 // import CardTailwind from './Components/Card/CardTailwind';
 
 // import DoubleCounter from './Components/DoubleCounter/DoubleCounter';
@@ -55,7 +63,15 @@ function App() {
         {/* <Photos></Photos> */}
         {/* <Header></Header> */}
         {/* <PhotosAsync></PhotosAsync> */}
-        <HackerNews></HackerNews>
+        {/* <HackerNews></HackerNews> */}
+        {/* <TestUseEffect></TestUseEffect> */}
+        {/* <Input></Input> */}
+        {/* <TextareaAutoResize></TextareaAutoResize> */}
+
+        {/* <DropDown></DropDown> */}
+        {/* <Blog></Blog> */}
+        {/* <DropDownWithHook></DropDownWithHook> */}
+        <SideBarMenuBtn></SideBarMenuBtn>
 
     </div>
       
