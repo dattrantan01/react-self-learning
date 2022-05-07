@@ -1,6 +1,9 @@
 
 import './App.css';
 import DropDownWithHook from './Components/DropDown/DropDownWithHook';
+import Form from './Components/Form/Form';
+import Input from './Components/Form/Form';
+import MovieSearchApp from './Components/MovieSearchApp/MovieSearchApp';
 
 import SideBarMenuBtn from './Components/SideBarMenu/SideBarMenuBtn';
 // import Blog from './Components/Blog';
@@ -71,8 +74,9 @@ function App() {
         {/* <DropDown></DropDown> */}
         {/* <Blog></Blog> */}
         {/* <DropDownWithHook></DropDownWithHook> */}
-        <SideBarMenuBtn></SideBarMenuBtn>
-
+        {/* <SideBarMenuBtn></SideBarMenuBtn> */}
+        {/* <Form></Form> */}
+        <MovieSearchApp></MovieSearchApp>
     </div>
       
     // </ThemeProvider>
