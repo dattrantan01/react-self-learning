@@ -16,6 +16,7 @@ const PhotosAsync = () => {
 
     console.log("da render", page, randomPhotos.length);
     const handleLoadMore = async () => {
+        // console.log("chac chan ra truowc useEffect");
         const newPhotos = randomPhotos;
         const image = await getPhotos(page).then((images) => {
             console.log("da get duoc photo")
@@ -23,11 +24,13 @@ const PhotosAsync = () => {
             setRandomPhotos([...newPhotos,...images]);
         });
         setPage(page + 1);
-        
+        // trong async thì thực hiện lần lượt
         console.log("clicked", page);
     }
     useEffect(() => {
-      handleLoadMore();
+      handleLoadMore().then(() => {
+        console.log("trong then");
+      });
       console.log("da useEffect")
     },[]);
     return (

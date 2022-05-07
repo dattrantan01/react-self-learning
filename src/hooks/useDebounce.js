@@ -5,6 +5,7 @@ export default function useDebounce(initialValue = "", delay = 1000) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setDebounce(initialValue);
+            console.log("useDebounce");
         }, delay);
         return () => {
             clearTimeout(timer);

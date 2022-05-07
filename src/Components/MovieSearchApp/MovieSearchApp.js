@@ -8,12 +8,19 @@ const MovieSearchApp = () => {
     const [movie, setMovie] = useState([]);
     const [query, setQuery] = useState("");
     const queryDebounce = useDebounce(query, 500);
-    useEffect(() => {
+    console.log('render');
+    useEffect( () => {
         const fetchData = async() => {
+            
+            // console.log("fetch data done"); 
+            
             const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=ffbb0941ef45ff4d3301e36eb631d750&query='${queryDebounce}'`);
             setMovie(response.data.results);
-        }
+            console.log("fetch data done 1");
+        };
         fetchData();
+        // const data = await fetchData();
+        console.log("fetch data useEffect");
     },[queryDebounce])
 
     return (

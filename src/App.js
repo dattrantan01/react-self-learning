@@ -12,8 +12,9 @@ import SideBarMenuBtn from './Components/SideBarMenu/SideBarMenuBtn';
 // import TextareaAutoResize from './Components/Input/TextareaAutoResize';
 // import HackerNews from './Components/News/HackerNews';
 // // import Header from './Components/Header/Header';
-// import Photos from './Components/Photo/Photos';
-// import PhotosAsync from './Components/Photo/PhotosAsync';
+import Photos from './Components/Photo/Photos';
+import PhotosAsync from './Components/Photo/PhotosAsync';
+import TestUseState from './Components/TestUseState/TestUseState';
 // import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import Button from './Components/Button/Button';
@@ -77,6 +78,7 @@ function App() {
         {/* <SideBarMenuBtn></SideBarMenuBtn> */}
         {/* <Form></Form> */}
         <MovieSearchApp></MovieSearchApp>
+        {/* <TestUseState></TestUseState> */}
     </div>
       
     // </ThemeProvider>

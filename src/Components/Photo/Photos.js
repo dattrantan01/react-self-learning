@@ -26,11 +26,11 @@ const Photos = () => {
             
             setRandomPhotos([...newPhotos,...images]);
             console.log("render trong then");
+            // trong then thi thực hiện lần lượt
         });
         // console.log("render ngoai then1");
         setPage(page + 1);
-        // console.log("render ngoai then2");
-        
+        // setPage và getPhotos đều async nhưng setPage ưu tiên trước        
         console.log("clicked", page);
     }
     useEffect(() => {
