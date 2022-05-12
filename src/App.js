@@ -1,20 +1,26 @@
 
 import './App.css';
-import DropDownWithHook from './Components/DropDown/DropDownWithHook';
-import Form from './Components/Form/Form';
-import Input from './Components/Form/Form';
-import MovieSearchApp from './Components/MovieSearchApp/MovieSearchApp';
+import FormSignUp from './Components/Form/FormSignUp';
+import FormSignUpFinal from './Components/Form/FormSignUpFinal';
+import FormSignUpSelf from './Components/Form/FormSignUpSelf';
+// import DropDownWithHook from './Components/DropDown/DropDownWithHook';
+// import Form from './Components/Form/Form';
+// import Input from './Components/Form/Form';
+// import MovieSearchApp from './Components/MovieSearchApp/MovieSearchApp';
 
-import SideBarMenuBtn from './Components/SideBarMenu/SideBarMenuBtn';
+// import SideBarMenuBtn from './Components/SideBarMenu/SideBarMenuBtn';
 // import Blog from './Components/Blog';
 // import DropDown from './Components/DropDown/DropDown';
 // import Input from './Components/Input/Input';
 // import TextareaAutoResize from './Components/Input/TextareaAutoResize';
 // import HackerNews from './Components/News/HackerNews';
 // // import Header from './Components/Header/Header';
-import Photos from './Components/Photo/Photos';
-import PhotosAsync from './Components/Photo/PhotosAsync';
-import TestUseState from './Components/TestUseState/TestUseState';
+// import Photos from './Components/Photo/Photos';
+// import PhotosAsync from './Components/Photo/PhotosAsync';
+// import TestUseState from './Components/TestUseState/TestUseState';
+// import Counter from './Components/Counter';
+
+// import HackerNews from './Components/News/HackerNews';
 // import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
 // import Button from './Components/Button/Button';
@@ -77,8 +83,13 @@ function App() {
         {/* <DropDownWithHook></DropDownWithHook> */}
         {/* <SideBarMenuBtn></SideBarMenuBtn> */}
         {/* <Form></Form> */}
-        <MovieSearchApp></MovieSearchApp>
+        {/* <MovieSearchApp></MovieSearchApp> */}
         {/* <TestUseState></TestUseState> */}
+        {/* <Counter></Counter> */}
+        {/* <FormSignUp></FormSignUp> */}
+        {/* <HackerNews></HackerNews> */}
+        {/* <FormSignUpSelf></FormSignUpSelf> */}
+        <FormSignUpFinal></FormSignUpFinal>
     </div>
       
     // </ThemeProvider>

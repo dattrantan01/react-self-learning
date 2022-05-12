@@ -1,26 +1,34 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import useDebounce from '../../hooks/useDebounce';
+// import LoadingSkeleton from '../Loading/LoadingSkeleton';
 import MovieItem from './MovieItem';
+import MovieItemLoading from './MovieItemLoading';
 
 //https://api.themoviedb.org/3/search/movie?api_key=ffbb0941ef45ff4d3301e36eb631d750&query=''
 const MovieSearchApp = () => {
     const [movie, setMovie] = useState([]);
     const [query, setQuery] = useState("");
     const queryDebounce = useDebounce(query, 500);
-    console.log('render');
+    const [loading, setLoading] = useState(true);
+    // console.log('render');
     useEffect( () => {
         const fetchData = async() => {
             
-            // console.log("fetch data done"); 
+            setLoading(true);
             
             const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=ffbb0941ef45ff4d3301e36eb631d750&query='${queryDebounce}'`);
-            setMovie(response.data.results);
-            console.log("fetch data done 1");
+
+            if(response.data.results){
+
+                setMovie(response.data.results);
+                setLoading(false);
+            }
+            // console.log("fetch data done 1");
         };
         fetchData();
         // const data = await fetchData();
-        console.log("fetch data useEffect");
+        // console.log("fetch data useEffect");
     },[queryDebounce])
 
     return (
@@ -35,8 +43,13 @@ const MovieSearchApp = () => {
                     }}
                 />
             </div>
+            {loading && <div className="grid grid-cols-3 gap-10">
+                <MovieItemLoading></MovieItemLoading>
+                <MovieItemLoading></MovieItemLoading>
+                <MovieItemLoading></MovieItemLoading>
+            </div>}
             <div className="grid grid-cols-3 gap-10">
-                {movie.length > 0 && movie.map((item, index) => 
+                {!loading && movie.length > 0 && movie.map((item, index) => 
                     <MovieItem key={item.id} data={item}></MovieItem>
                 )}
 

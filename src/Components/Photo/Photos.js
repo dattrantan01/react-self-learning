@@ -23,6 +23,7 @@ const Photos = () => {
         const newPhotos = randomPhotos;
         getPhotos(page).then((images) => {
             console.log("da get duoc photo")
+            console.log(images)
             
             setRandomPhotos([...newPhotos,...images]);
             console.log("render trong then");
