@@ -1,8 +1,10 @@
 
 import './App.css';
-import FormSignUp from './Components/Form/FormSignUp';
-import FormSignUpFinal from './Components/Form/FormSignUpFinal';
-import FormSignUpSelf from './Components/Form/FormSignUpSelf';
+// import FormSignUp from './Components/Form/FormSignUp';
+// import FormSignUpFinal from './Components/Form/FormSignUpFinal';
+// import FormSignUpSelf from './Components/Form/FormSignUpSelf';
+import FormUsingRHF from './Components/Form/FormUsingRHF';
+import FormUsingRHFYup from './Components/Form/FormUsingRHFYup';
 // import DropDownWithHook from './Components/DropDown/DropDownWithHook';
 // import Form from './Components/Form/Form';
 // import Input from './Components/Form/Form';
@@ -89,7 +91,9 @@ function App() {
         {/* <FormSignUp></FormSignUp> */}
         {/* <HackerNews></HackerNews> */}
         {/* <FormSignUpSelf></FormSignUpSelf> */}
-        <FormSignUpFinal></FormSignUpFinal>
+        {/* <FormSignUpFinal></FormSignUpFinal> */}
+        {/* <FormUsingRHF></FormUsingRHF> */}
+        <FormUsingRHFYup></FormUsingRHFYup>
     </div>
       
     // </ThemeProvider>

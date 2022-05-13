@@ -26,8 +26,9 @@ const FormSignUp = () => {
             lastName: ''
         },
         validate: validate,
-        onSubmit: (values) => {
+        onSubmit: (values, actions) => {
             console.log(values);
+     
             
         },
     })
@@ -64,7 +65,10 @@ const FormSignUp = () => {
                 {  formik.touched.lastName &&
                     formik.errors.lastName ? <div className="text-sm text-red-500">{formik.errors.lastName} </div>: null}
             </div>
-            <button type="submit" className="border border-violet-500 bg-violet-400 p-3 rounded-lg w-full">Submit</button>
+       
+            <button type="submit" className="border border-violet-500 bg-violet-400 p-3 rounded-lg w-full"
+               
+            >Submit</button>
         </form>
     );
 };

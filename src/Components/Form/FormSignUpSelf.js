@@ -35,8 +35,11 @@ const FormSignUpSelf = () => {
                 .required("required"),
             
         }),
-        onSubmit: (values) => {
-            console.log(values)
+        onSubmit: (values,actions) => {
+           setTimeout(() =>{
+                console.log(values);
+                actions.resetForm();
+           }, 3000)
         }
     });
 
@@ -74,7 +77,10 @@ const FormSignUpSelf = () => {
                 {   formik.touched.lastName &&
                      formik.errors.lastName ? <div className="text-red-500">{formik.errors.lastName}</div> : null}
             </div>
-            <button type="submit" className="p-3 border border-teal-500 bg-teal-400 rounded-lg mt-5 w-full">Submit</button>
+            {formik.isSubmitting ? <div>Loading . . .</div> : null}
+            <button type="submit" className="p-3 border border-teal-500 bg-teal-400 rounded-lg mt-5 w-full"
+                disabled={formik.isSubmitting}
+            >Submit</button>
         </form>
         
     );

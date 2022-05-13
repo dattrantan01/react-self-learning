@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, isPromise } from "formik";
 import * as Yup from "yup";
 
 const FormSignUpFinal = () => {
@@ -19,12 +19,20 @@ const FormSignUpFinal = () => {
             email: Yup.string().email().required("Required"),
             introduce: Yup.string().required("Required"),
             job: Yup.string().required("Required"),
-            accept: Yup.boolean(),
+            accept: Yup.boolean().oneOf(
+                [true],
+                "Please check the terms and conditions"
+            ),
           })}
-          onSubmit={(values) => {
-            console.log(values);
+          onSubmit={(values, actions) => {
+            setTimeout(() => {
+                console.log(values);
+                actions.resetForm();
+            }, 5000)
+          
           }}
         >
+          {({ isSubmitting }) => ( 
             <Form className="p-10 w-full max-w-[500px] mx-auto" autoComplete="off">
                 <div className="flex flex-col gap-2 mb-5">
                     <label htmlFor="firstName">Firstname</label>
@@ -109,14 +117,18 @@ const FormSignUpFinal = () => {
                 
                 
                 <div>
+                    {isSubmitting ? <div>Loading...</div> : null}
                     <button
                         type="submit"
                         className="w-full p-4 bg-blue-600 text-white font-semibold rounded-lg"
+                        disabled={isSubmitting}
                     >
                         Submit
                     </button>
                 </div>
             </Form>
+          )}
+            
         </Formik>
       );
 };
