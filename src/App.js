@@ -1,10 +1,12 @@
 
+import { useState } from 'react';
 import './App.css';
 // import FormSignUp from './Components/Form/FormSignUp';
 // import FormSignUpFinal from './Components/Form/FormSignUpFinal';
 // import FormSignUpSelf from './Components/Form/FormSignUpSelf';
-import FormUsingRHF from './Components/Form/FormUsingRHF';
-import FormUsingRHFYup from './Components/Form/FormUsingRHFYup';
+// import FormUsingRHF from './Components/Form/FormUsingRHF';
+// import FormUsingRHFYup from './Components/Form/FormUsingRHFYup';
+import Modal from './Components/Modal/Modal';
 // import DropDownWithHook from './Components/DropDown/DropDownWithHook';
 // import Form from './Components/Form/Form';
 // import Input from './Components/Form/Form';
@@ -47,9 +49,10 @@ import FormUsingRHFYup from './Components/Form/FormUsingRHFYup';
 // }
 
 function App() {
-
+  const [show, setShow] = useState(false);
   return (
     // <ThemeProvider theme = {theme}> comment themeprovider lai de dung tailwind
+  
     <div>
       {/* comment lai GlobalStyle vi su dung tailwind khong can */}
       {/* <GlobalStyles></GlobalStyles> */} 
@@ -93,7 +96,13 @@ function App() {
         {/* <FormSignUpSelf></FormSignUpSelf> */}
         {/* <FormSignUpFinal></FormSignUpFinal> */}
         {/* <FormUsingRHF></FormUsingRHF> */}
-        <FormUsingRHFYup></FormUsingRHFYup>
+        {/* <FormUsingRHFYup></FormUsingRHFYup> */}
+
+        <button className="p-4 border border-purple-500 bg-purple-400" onClick={() => setShow(true) }>Show Modal</button>
+        <p>lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el</p>
+        
+        <Modal open={show} handleClose={() => setShow(false)}></Modal>
+
     </div>
       
     // </ThemeProvider>
