@@ -7,6 +7,7 @@ import './App.css';
 // import FormUsingRHF from './Components/Form/FormUsingRHF';
 // import FormUsingRHFYup from './Components/Form/FormUsingRHFYup';
 import Modal from './Components/Modal/Modal';
+import Tooltip from './Components/Tooltip/Tooltip';
 // import DropDownWithHook from './Components/DropDown/DropDownWithHook';
 // import Form from './Components/Form/Form';
 // import Input from './Components/Form/Form';
@@ -41,7 +42,9 @@ import Modal from './Components/Modal/Modal';
 // import YoutubeList from './Components/Youtube/YoutubeList';
 // import { GlobalStyles } from './GlobalStyles';
 // import { ThemeProvider } from 'styled-components'
-
+import {ErrorBoundary} from 'react-error-boundary'
+import TestUseContext from './Components/TestUseContext/TestUseContext';
+import Gallery from './Components/Gallery/Gallery';
 // const theme = {
 //   colors: { 
 //     blue: "#2979ff"
@@ -97,16 +100,22 @@ function App() {
         {/* <FormSignUpFinal></FormSignUpFinal> */}
         {/* <FormUsingRHF></FormUsingRHF> */}
         {/* <FormUsingRHFYup></FormUsingRHFYup> */}
-
+{/* 
         <button className="p-4 border border-purple-500 bg-purple-400" onClick={() => setShow(true) }>Show Modal</button>
         <p>lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el lorem isum dolor sit amet, consectetur adipiscing el</p>
         
-        <Modal open={show} handleClose={() => setShow(false)}></Modal>
+        <Modal open={show} handleClose={() => setShow(false)}></Modal> */}
+          {/* <Tooltip text="Hover me">This is a tooltip content </Tooltip> */}
 
+        
+        {/* <TestUseContext></TestUseContext> */}
+
+        <Gallery></Gallery>
     </div>
       
     // </ThemeProvider>
   );
 }
+
 
 export default App;
