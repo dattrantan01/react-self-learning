@@ -31,6 +31,41 @@ const fakeData = [
       url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       isFavorite: false,
     },
+    {
+      id: 8,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 9,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 10,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 11,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 12,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 13,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
+    {
+      id: 14,
+      url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      isFavorite: false,
+    },
   ];
   
 
@@ -40,6 +75,8 @@ const GalleryProvider = (props) => {
     const [photos, setPhotos] = useState(fakeData);
     const [cardItems, setCardItems] = useState([]);
     const [favorites, setFavorites] = useState([]);
+    const [showCart, setShowCart] = useState(false);
+    const [showFavorites, setShowFavorites] = useState(false);
 
     // hàm cập nhật lại favorites
     const favoritesList = (id) => {
@@ -50,10 +87,27 @@ const GalleryProvider = (props) => {
             }
             return photo;
         });
-        setPhotos(newList)
+
+        setFavorites(newList)
+
     }
+
+    const cardItemsList = (photo) => {
+      setCardItems([...cardItems, photo]);
+    }
+    const deleteCartItems = (id) => {
+      const newCardItems = cardItems.filter((item) => {
+        if(item !== id) {
+          return item;
+        }
+      })
+      setCardItems(newCardItems);
+    }
+   
+
+  
     
-    const value = { photos, cardItems, favorites, setPhotos, setFavorites, setCardItems, favoritesList}
+    const value = { photos, cardItems, favorites, setPhotos, setFavorites, setCardItems, favoritesList, cardItemsList, setShowCart, showCart, deleteCartItems, showFavorites, setShowFavorites}
     return <GalleryContext.Provider value={value} {...props}>{props.children}</GalleryContext.Provider>
 }
 

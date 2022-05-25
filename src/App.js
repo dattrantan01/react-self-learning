@@ -45,6 +45,7 @@ import Tooltip from './Components/Tooltip/Tooltip';
 import {ErrorBoundary} from 'react-error-boundary'
 import TestUseContext from './Components/TestUseContext/TestUseContext';
 import Gallery from './Components/Gallery/Gallery';
+import HeaderGallery from './Components/Gallery/HeaderGallery';
 // const theme = {
 //   colors: { 
 //     blue: "#2979ff"
