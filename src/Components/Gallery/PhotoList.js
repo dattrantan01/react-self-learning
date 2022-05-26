@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 
 const PhotoList = () => {
     const { photos, cardItems } = useGallery();
-
+    console.log(photos)
+    console.log(cardItems)
     return (
         <div className="py-10 px-5">
             <div className="grid grid-cols-4 gap-7">

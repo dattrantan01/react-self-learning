@@ -93,11 +93,16 @@ const GalleryProvider = (props) => {
     }
 
     const cardItemsList = (photo) => {
-      setCardItems([...cardItems, photo]);
+      const check = cardItems.every((item) => {
+        return item.id !== photo.id;
+      })
+      if(check){
+        setCardItems([...cardItems, photo]);
+      }
     }
-    const deleteCartItems = (id) => {
+    const deleteCartItems = (photo) => {
       const newCardItems = cardItems.filter((item) => {
-        if(item !== id) {
+        if(item.id !== photo.id) {
           return item;
         }
       })

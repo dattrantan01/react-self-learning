@@ -3,8 +3,6 @@ import { useGallery } from '../../Contexts/galleryContext';
 
 const HeaderGallery = () => {
     const { cardItems, favorites, showCart, setShowCart, setShowFavorites, showFavorites } = useGallery()
-    console.log("show favorites", showFavorites);
-    console.log("show Cart", showCart);
     return (
         <div className="fixed w-full h-12 bg-white shadow-md z-10 flex items-center justify-end p-4 opacity-95 gap-5">
             <span className="w-8 h-8 cursor-pointer relative" 

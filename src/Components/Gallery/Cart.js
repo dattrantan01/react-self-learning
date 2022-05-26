@@ -45,7 +45,7 @@ const Cart = () => {
                                 />
                             </div>
                             <button className="border border-pink-700 bg-pink-600 px-6 py-2 text-white rounded-xl"
-                                onClick={() => favoritesList(item.id)}
+                                onClick={() => favoritesList(item)}
                             >
                                 Delete
                             </button>
